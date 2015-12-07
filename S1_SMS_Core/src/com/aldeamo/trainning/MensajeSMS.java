@@ -14,6 +14,10 @@ public class MensajeSMS {
 		this.contenido = contenido;
 	}
 
+	public MensajeSMS() {
+		super();
+	}
+
 	public long getId() {
 		return id;
 	}

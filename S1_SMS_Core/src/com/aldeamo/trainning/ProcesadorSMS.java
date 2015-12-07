@@ -10,10 +10,15 @@ public class ProcesadorSMS {
 	public MensajeSMS procesar(MensajeSMS sms) {
 		
 		// Si el mensaje va dirigido al servicio de chat, no envía mensaje de respuesta
-		if(CodigosCortos.AMIGO_CHAT.equals( sms.getDestino() ) ){
-			return null;
+		if(CodigosCortos.AMIGO.equals( sms.getDestino() ) ){
+			return procesarAmigo(sms);			
+		}else{
+			return procesarSMSi(sms);
 		}
-			
+	}
+
+	
+	private MensajeSMS procesarAmigo(MensajeSMS sms) {
 		// Procesa un mensaje que vaya al otro código corto, es decir, a la inscripción de amigo
 		sms.setId(contador.getAndIncrement());
 		
@@ -27,4 +32,16 @@ public class ProcesadorSMS {
 		return respuesta;
 	}
 
+
+	private MensajeSMS procesarSMSi(MensajeSMS sms) {
+		// Procesa un mensaje que vaya al otro código corto, es decir, a la inscripción de amigo
+		sms.setId(contador.getAndIncrement());
+		
+		MensajeSMS respuesta = new MensajeSMS();
+		
+		respuesta.setId( sms.getId() );
+		respuesta.setEstado( "recibido" );
+		
+		return respuesta;
+	}
 }
