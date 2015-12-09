@@ -63,11 +63,6 @@ public class SMSProcessorTest {
 				"recibido", 
 				respuesta.getEstado());
 		
-		assertEquals(
-				"Codigo de origen", 
-				CodigosCortos.SMSi, 
-				respuesta.getOrigen());
-		
 		assertNotEquals(
 				"Id generado", 
 				0, 
