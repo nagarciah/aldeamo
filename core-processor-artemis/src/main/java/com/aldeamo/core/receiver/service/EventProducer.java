@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
-import com.aldeamo.core.receiver.entity.SMSMessage;
+import com.aldeamo.core.receiver.dto.SMSMessage;
 
 @Service
 public class EventProducer {

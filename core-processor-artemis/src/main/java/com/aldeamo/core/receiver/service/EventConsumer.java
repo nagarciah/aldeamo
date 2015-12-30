@@ -7,7 +7,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import com.aldeamo.core.receiver.business.MessageProcessor;
-import com.aldeamo.core.receiver.entity.SMSMessage;
+import com.aldeamo.core.receiver.dto.SMSMessage;
 
 @Component
 public class EventConsumer {

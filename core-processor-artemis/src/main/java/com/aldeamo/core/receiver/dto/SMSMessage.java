@@ -4,7 +4,10 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class SMSMessage implements Serializable {
 
 	public static enum SMSStatus {
@@ -43,6 +46,7 @@ public class SMSMessage implements Serializable {
 	protected String senderCampaign;
 
 	// Sistema
+	@Id
 	protected long id;
 	protected UUID uuid; // Usar?? 
 	protected long transactionId;
