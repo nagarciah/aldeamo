@@ -7,7 +7,7 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
 import com.aldeamo.core.receiver.business.MessageForwarder;
-import com.aldeamo.core.receiver.entity.SMSMessage;
+import com.aldeamo.core.receiver.entity.SMSEntity;
 
 @Service
 public class MessageSenderImpl implements MessageForwarder {
@@ -23,7 +23,7 @@ public class MessageSenderImpl implements MessageForwarder {
 	}
 
 	@Override
-	public SMSMessage forward(SMSMessage message) {
+	public SMSEntity forward(SMSEntity message) {
 		message.setId(COUNTER.getAndIncrement());
 		jmsTemplate.convertAndSend(SIMPLE_QUEUE, message);
 		

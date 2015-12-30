@@ -1,7 +1,7 @@
 package com.aldeamo.core.receiver.business;
 
-import com.aldeamo.core.receiver.entity.SMSMessage;
+import com.aldeamo.core.receiver.entity.SMSEntity;
 
 public interface MessageForwarder {
-	public SMSMessage forward(SMSMessage message);
+	public SMSEntity forward(SMSEntity message);
 }

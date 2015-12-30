@@ -57,4 +57,13 @@ public class MensajeSMS {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("MensajeSMS [id=").append(id).append(", origen=").append(origen).append(", destino=")
+				.append(destino).append(", contenido=").append(contenido).append(", estado=").append(estado)
+				.append("]");
+		return builder.toString();
+	}
 }

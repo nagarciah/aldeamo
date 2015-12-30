@@ -7,7 +7,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import com.aldeamo.core.receiver.dao.SMSMessageRepository;
-import com.aldeamo.core.receiver.entity.SMSMessage;
+import com.aldeamo.core.receiver.entity.SMSEntity;
 
 @Component
 public class SimpleListener {
@@ -17,7 +17,7 @@ public class SimpleListener {
 	private SMSMessageRepository repository;
 	
 	@JmsListener(destination="simple.queue")
-	public void send(SMSMessage message){
+	public void send(SMSEntity message){
 		//log.info("Mensaje recibido de la cola: ");
 		log.info(message);
 		repository.save(message);		

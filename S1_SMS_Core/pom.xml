@@ -12,8 +12,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source />
-					<target />
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -25,5 +25,42 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
+
+		<!-- Sólo Spark -->
+		<dependency>
+			<groupId>com.sparkjava</groupId>
+			<artifactId>spark-core</artifactId>
+			<version>2.3</version>
+		</dependency>
+
+		<!-- Para transformar respuestas en JSON con Spark -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<!-- Para usar plantillas HTML con Thymeleaf en Spark -->
+		<dependency>
+			<groupId>com.sparkjava</groupId>
+			<artifactId>spark-template-thymeleaf</artifactId>
+			<version>2.3</version>
+		</dependency>
+		
+		<!-- Para pruebas del GUI con Selenide -->
+		<dependency>
+			<groupId>com.codeborne</groupId>
+			<artifactId>selenide</artifactId>
+			<version>2.24</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Para validaciones en la lógica de negocio -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+		
 	</dependencies>
 </project>
