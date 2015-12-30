@@ -6,14 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 // TODO Debe ser referenciada de un proyecto core externo con el modelo de datos centralizado
-@Entity
+@Entity 
 public class SMSMessage implements Serializable {
 	
 	private static final long serialVersionUID = 7858122293375326032L;
 	
 	@Id
 	protected Long id;
-	protected String gsmOrigin;
+	protected String gsmOrigin; 
 	protected String gsmTarget;
 	protected String content;
 

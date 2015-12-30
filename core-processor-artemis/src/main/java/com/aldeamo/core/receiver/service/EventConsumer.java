@@ -15,7 +15,7 @@ public class EventConsumer {
 	
 	private final MessageProcessor processor;
 	
-	public static final String EVENT_SOURCE = "simple.queue";
+	public static final String EVENT_SOURCE = "core.processor.in.queue";
 	
 	@Autowired
 	public EventConsumer(MessageProcessor processor) {

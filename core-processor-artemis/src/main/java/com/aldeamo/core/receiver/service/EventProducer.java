@@ -9,7 +9,7 @@ import com.aldeamo.core.receiver.entity.SMSMessage;
 @Service
 public class EventProducer {
 	
-	private static final String EVENT_SINK = "simple.queue";
+	private static final String EVENT_SINK = "core.processor.out.queue";
 	private final JmsTemplate jmsTemplate;
 	
 	@Autowired
