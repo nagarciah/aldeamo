@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aldeamo.core.model.SMSMessage;
 import com.aldeamo.core.receiver.business.MessageForwarder;
-import com.aldeamo.core.receiver.dto.SMSMessage;
-import com.aldeamo.core.receiver.entity.SMSEntity;
 
 @RestController
 public class MessageReceiver {
@@ -26,14 +25,13 @@ public class MessageReceiver {
 	 * @param msg
 	 */
 	@RequestMapping(value = "/sms", method = RequestMethod.POST)
-	public SMSEntity sendSMS(@RequestBody SMSEntity msg) {
-//		log.info("Mensaje recibido: ");
-//		log.info(msg);
+	public SMSMessage sendSMS(@RequestBody SMSMessage msg) {
+		log.info("Mensaje recibido: " + msg);
 		return forwarder.forward(msg);
 	}
 
-	@RequestMapping(value = "/sms", method = RequestMethod.GET)
-	public SMSMessage getAll() {
-		return new SMSMessage("origin", "target", "content");
-	}
+//	@RequestMapping(value = "/sms", method = RequestMethod.GET)
+//	public SMSMessage getAll() {
+//		return new SMSMessage("origin", "target", "content");
+//	}
 }

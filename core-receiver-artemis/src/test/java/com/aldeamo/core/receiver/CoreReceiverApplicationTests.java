@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.aldeamo.core.receiver.dto.SMSMessage;
+import com.aldeamo.core.model.SMSMessage;
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
 
 

@@ -1,4 +1,4 @@
-package com.aldeamo.core.receiver.service;
+package com.aldeamo.core.processor.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
-import com.aldeamo.core.receiver.business.MessageProcessor;
-import com.aldeamo.core.receiver.dto.SMSMessage;
+import com.aldeamo.core.model.SMSMessage;
+import com.aldeamo.core.processor.business.MessageProcessor;
 
 @Component
 public class EventConsumer {
@@ -15,6 +15,7 @@ public class EventConsumer {
 	
 	private final MessageProcessor processor;
 	
+	// TODO Sacar a componente compartido junto con DTOs/entities
 	public static final String EVENT_SOURCE = "core.processor.in.queue";
 	
 	@Autowired

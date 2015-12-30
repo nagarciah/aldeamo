@@ -1,13 +1,13 @@
-package com.aldeamo.core.receiver.business;
+package com.aldeamo.core.processor.business;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.aldeamo.core.receiver.dao.SMSMessageRepository;
-import com.aldeamo.core.receiver.dto.SMSMessage;
-import com.aldeamo.core.receiver.service.EventProducer;
+import com.aldeamo.core.model.SMSMessage;
+import com.aldeamo.core.processor.dao.SMSMessageRepository;
+import com.aldeamo.core.processor.service.EventProducer;
 
 @Service
 public class MessageProcessor {

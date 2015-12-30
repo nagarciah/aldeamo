@@ -1,10 +1,14 @@
-package com.aldeamo.core.receiver.dto;
+package com.aldeamo.core.model;
 
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class SMSMessage implements Serializable {
 
 	public static enum SMSStatus {
@@ -29,6 +33,7 @@ public class SMSMessage implements Serializable {
 	private static final long serialVersionUID = 7858122293375326032L;
 	
 	// Cliente (Obligatorios)
+	@Column(name="from_")
 	protected String from;
 	protected String to;
 	protected String content;
@@ -43,6 +48,7 @@ public class SMSMessage implements Serializable {
 	protected String senderCampaign;
 
 	// Sistema
+	@Id
 	protected long id;
 	protected UUID uuid; // Usar?? 
 	protected long transactionId;
