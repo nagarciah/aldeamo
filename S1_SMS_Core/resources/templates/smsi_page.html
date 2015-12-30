@@ -1,0 +1,19 @@
+<body>
+	<form action="/" method="POST">
+		<h1>Envío de mensajes SMS</h1>
+		<span id="resultado" th:text="${resultado}" style="color:green"></span>
+		
+		<br />
+		<br />
+		<label for="phoneNumber">Número de destino:</label><br />
+		<input type="text" name="phoneNumber" id="phoneNumber" placeholder="Ej: 310456234" />
+		
+		<br />
+		<br />
+		<label for="messageBox">Mensaje:</label><br />
+		<textarea name="messageBox" id="messageBox" rows="5" cols="50" placeholder="Ingrese aquí su mensaje"></textarea>
+		
+		<br />
+		<button id="submitButton" type="submit">Enviar</button>
+	</form>
+</body>
