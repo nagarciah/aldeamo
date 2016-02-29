@@ -1,0 +1,73 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	  layout:decorator="fragments/layout">
+
+<head lang="en">
+	<title th:text="#{app.title}">Titulo de la pagina]</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript">
+		// Define la aplicacion
+		var coronaApp = angular.module("coronaApp", []);
+		
+		// Crea controlador
+		coronaApp.controller("betsController", function($scope, $http) {
+			$scope.bet = {};
+			
+			$scope.submitBets = function(){
+				$http({
+					method: "POST",
+					url: "/hello_rest",
+					//data: $scope.bet,
+					//method: "GET",
+					//url: "/tip/",
+					data: {
+						nombre: 'Nelson'
+						edad: 35,
+						empleado: false
+					},
+					timeout: 20000,
+					//headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+					headers: {'Content-Type': 'application/json'}
+				})
+				.then(function success(data){
+					if(data.errors){
+						$scope.bet.error = data.errors.betError;
+					}else{
+						$scope.message = data.message;
+					}
+				}, function errorCallback(response){
+					$scope.message = response;
+				});
+			};
+		});
+	</script>
+</head>
+
+<body ng-app="coronaApp" ng-controller="betsController">
+	<div layout:fragment="content">
+		<h1 th:text="#{bets.title}">Title</h1>
+		<h1 th:text="#{bets.bigPrize}">$0.000.000</h1>
+		<h3 th:text="#{bets.vs(${local}, ${visitor})}">Local vs Visitor</h3>
+		
+		<form name="betsForm" ng-submit="submitBets()" method="post">
+			<label th:text="${local}">Local</label>
+			<input type="text" name="localScore" ng-model="bet.local" />
+			
+			<label th:text="${visitor}">Visitor</label>
+			<input type="text" name="visitorScore" ng-model="bet.visitor" />
+			
+			<span ng-show="bet.error">{{bet.error}}</span>
+			<span ng-show="message">{{message}}</span>
+			
+			<button type="submit" th:text="#{bets.submit}">Submit</button>
+		</form>
+		
+		
+		<div id="previousMatch">
+			<p text="">Local vs Visitor</p>
+			<p text="">0 - 4</p>
+			<p text="">2 - 1</p>
+			<p text="">0</p>
+		</div>	
+	</div>
+</body>
+</html>
