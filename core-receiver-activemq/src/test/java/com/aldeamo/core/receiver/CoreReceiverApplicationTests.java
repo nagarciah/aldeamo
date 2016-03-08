@@ -18,32 +18,18 @@ import com.aldeamo.core.receiver.entity.SMSMessage;
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CoreReceiverApplication.class)
-@WebAppConfiguration
 public class CoreReceiverApplicationTests {
-
-//	@Autowired
-//	private WebApplicationContext context;
-//
-//	@Before
-//	public void restAssureSetup() {
-//		RestAssuredMockMvc.webAppContextSetup(context);
-//	}
-//
-//	@After
-//	public void restAssureReset() {
-//		RestAssuredMockMvc.reset();
-//	}
 
 	@Test
 	public void testSendSMS() {
+		// Arrange
 		SMSMessage sms = new SMSMessage(0L, "3101111111", "3102222222", "Mensaje de prueba");
 		
 		given()
 			.body(sms)
+			.contentType("application/json")
 		.when()
-			.post("/sms/")
+			.post("http://localhost:8888/sms/")
 		.then()
 			.log().body()
 			.statusCode(200)

@@ -2,6 +2,8 @@ package com.aldeamo.trainning;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.apache.commons.validator.routines.LongValidator;
+
 public class ProcesadorSMS {
 	
 
@@ -11,9 +13,9 @@ public class ProcesadorSMS {
 		
 		// Si el mensaje va dirigido al servicio de chat, no envía mensaje de respuesta
 		if(CodigosCortos.AMIGO.equals( sms.getDestino() ) ){
-			return procesarAmigo(sms);			
+			return procesarAmigo(sms );
 		}else{
-			return procesarSMSi(sms);
+			return procesarSMSi(sms); 
 		}
 	}
 
@@ -40,7 +42,16 @@ public class ProcesadorSMS {
 		MensajeSMS respuesta = new MensajeSMS();
 		
 		respuesta.setId( sms.getId() );
-		respuesta.setEstado( "recibido" );
+		
+		boolean isNumeric = LongValidator.getInstance().isValid(sms.getDestino()); 
+
+		if(isNumeric){
+			respuesta.setEstado( "recibido" );
+		}else{
+			respuesta.setEstado( "rechazado porque el número no es un número válido" );
+		}
+			
+		
 		
 		return respuesta;
 	}

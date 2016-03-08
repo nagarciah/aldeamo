@@ -1,7 +1,6 @@
 package test.java;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 import org.junit.Ignore;
@@ -10,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 import com.codeborne.selenide.junit.ScreenShooter;
+
 
 public class AldeamoNewPageTest {
 	@Rule

@@ -14,14 +14,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.aldeamo.core.CoreProcessorApplication;
 import com.aldeamo.core.model.SMSMessage;
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CoreReceiverApplication.class)
+@SpringApplicationConfiguration(classes = CoreProcessorApplication.class)
 @WebAppConfiguration
-public class CoreReceiverApplicationTests {
+public class CoreProcessorApplicationTests {
 
 	@Autowired
 	private WebApplicationContext context;
