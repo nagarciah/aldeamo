@@ -1,6 +1,9 @@
-com/aldeamo/trainning/fifa/repository/JugadorRepository.class
 com/aldeamo/trainning/fifa/FifaApiApplication.class
-com/aldeamo/trainning/fifa/api/FifaAPI.class
+com/aldeamo/trainning/fifa/repository/EquipoRepository.class
 com/aldeamo/trainning/fifa/entity/Jugador.class
 com/aldeamo/trainning/fifa/entity/Equipo.class
+com/aldeamo/trainning/fifa/monitoring/JMXFifaMonitor.class
 com/aldeamo/trainning/fifa/config/WebSecurityConfig.class
+com/aldeamo/trainning/fifa/repository/JugadorRepository.class
+com/aldeamo/trainning/fifa/monitoring/HttpInterceptor.class
+com/aldeamo/trainning/fifa/api/FifaAPI.class

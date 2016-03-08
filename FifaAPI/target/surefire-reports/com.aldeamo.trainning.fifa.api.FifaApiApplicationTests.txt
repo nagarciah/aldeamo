@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.aldeamo.trainning.fifa.api.FifaApiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.647 sec <<< FAILURE! - in com.aldeamo.trainning.fifa.api.FifaApiApplicationTests
-contextLoads(com.aldeamo.trainning.fifa.api.FifaApiApplicationTests)  Time elapsed: 0.007 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.755 sec <<< FAILURE! - in com.aldeamo.trainning.fifa.api.FifaApiApplicationTests
+contextLoads(com.aldeamo.trainning.fifa.api.FifaApiApplicationTests)  Time elapsed: 0.011 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)

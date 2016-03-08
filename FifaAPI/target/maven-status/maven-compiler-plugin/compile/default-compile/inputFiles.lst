@@ -1,6 +1,9 @@
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/api/FifaAPI.java
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/entity/Equipo.java
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/config/WebSecurityConfig.java
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/entity/Jugador.java
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/repository/JugadorRepository.java
-/home/nelson/Desarrollo/workspaces/sts/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/FifaApiApplication.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/repository/JugadorRepository.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/api/FifaAPI.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/monitoring/HttpInterceptor.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/repository/EquipoRepository.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/entity/Jugador.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/entity/Equipo.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/config/WebSecurityConfig.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/FifaApiApplication.java
+/home/nelson/Desarrollo/github/aldeamo/FifaAPI/src/main/java/com/aldeamo/trainning/fifa/monitoring/JMXFifaMonitor.java

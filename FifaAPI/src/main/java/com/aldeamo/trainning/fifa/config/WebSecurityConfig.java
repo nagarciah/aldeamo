@@ -20,7 +20,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("user1").password("secret1").roles("USER")
                 .and()
-                .withUser("user2").password("secret2").roles("USER");
+                .withUser("user2").password("secret2").roles("USER")
+                .and()
+                .withUser("admin").password("admin").roles("ADMIN");
     }
     
     @Override
@@ -32,6 +34,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
 	@Override
 	public void configure(WebSecurity security){
-	    security.ignoring().antMatchers("/jugador/**");
+	    security.ignoring().antMatchers("/jugador/**", "/metrics/**");//TODO habilitar seguridad para metrics, cuando sepa como conectar desde elastic watch
 	}
 }
