@@ -1,0 +1,9 @@
+jul 08, 2016 5:32:54 PM com.nagarciah.blog.logging.Ejercicio6Corregido main
+GRAVE: Ha ocurrido un error:
+java.lang.Exception: Error interno
+	at com.nagarciah.blog.logging.Ejercicio6Corregido.dividir(Ejercicio6Corregido.java:24)
+	at com.nagarciah.blog.logging.Ejercicio6Corregido.main(Ejercicio6Corregido.java:14)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.nagarciah.blog.logging.Ejercicio6Corregido.dividir(Ejercicio6Corregido.java:22)
+	... 1 more
+

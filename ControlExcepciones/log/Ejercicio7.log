@@ -1,0 +1,9 @@
+Señor usuario, los datos que ha ingresado no son correctos y han causado un error en la aplicación: a=0, b=10
+jul 08, 2016 5:39:28 PM com.nagarciah.blog.logging.Ejercicio7 main
+GRAVE: Ha ocurrido ejecutando la división:
+java.lang.ArithmeticException: / by zero
+	at com.nagarciah.blog.logging.Ejercicio7.dividir(Ejercicio7.java:24)
+	at com.nagarciah.blog.logging.Ejercicio7.main(Ejercicio7.java:15)
+
+jul 08, 2016 5:39:28 PM com.nagarciah.blog.logging.Ejercicio7 main
+GRAVE: parámetros: a= 0,b=10
